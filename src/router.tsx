@@ -1,6 +1,5 @@
 import React from 'react'
 import { createHashRouter, RouteObject } from 'react-router-dom'
-import ErrorPage from './components/error-page'
 import { getDefaultLayout } from './components/layout'
 import HomePage from './pages/home'
 
@@ -10,6 +9,10 @@ export const routerObjects: RouteObject[] = [
     Component: HomePage,
   },
 ]
+
+function ErrorBoundary() {
+  return <div>something went wrong</div>
+}
 
 export function createRouter(): ReturnType<typeof createHashRouter> {
   const routeWrappers = routerObjects.map((router) => {
@@ -21,7 +24,7 @@ export function createRouter(): ReturnType<typeof createHashRouter> {
       ...router,
       element: page,
       Component: null,
-      ErrorBoundary: ErrorPage,
+      ErrorBoundary: () => <ErrorBoundary />,
     }
   })
   return createHashRouter(routeWrappers)
