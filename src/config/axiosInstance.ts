@@ -25,5 +25,3 @@ axiosClient.interceptors.request.use(
     return Promise.reject(error)
   },
 )
-
-export default axiosClient
