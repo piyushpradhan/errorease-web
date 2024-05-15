@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import AppLayout from './layouts/AppLayout/AppLayout'
 import Dashboard from './pages/Dashboard/Dashboard'
+import Issue from './pages/Issue/Issue'
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ export const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Dashboard />,
+      },
+      {
+        path: '/issue/:issueId',
+        element: <Issue />,
       },
     ],
   },
