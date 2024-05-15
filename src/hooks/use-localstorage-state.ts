@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+/* eslint-disable no-console */
+import { useEffect, useState } from 'react'
 
 type UseLocalStorageStateHook<T> = [T, React.Dispatch<React.SetStateAction<T>>]
 
