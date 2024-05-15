@@ -1,18 +1,19 @@
+/* eslint-disable no-console */
 'use client'
 
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Tags } from 'lucide-react'
+import { getInitials } from 'src/utils/name'
 
 import Logout from '../Logout/Logout'
-
-import { Separator } from '../ui/separator'
-import { Button } from '../ui/button'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
-import { Badge } from '../ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
-import { useLocation, useNavigate } from 'react-router-dom'
 import Settings from '../Settings/Settings'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import { Badge } from '../ui/badge'
+import { Button } from '../ui/button'
+import { Separator } from '../ui/separator'
+
 import { sidebarLinks } from './sidebar.data'
-import { getInitials } from 'src/utils/name'
 
 export default function Sidebar() {
   const navigate = useNavigate()

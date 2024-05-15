@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
+
 import AppLayout from './layouts/AppLayout/AppLayout'
 
 export const router = createBrowserRouter([
