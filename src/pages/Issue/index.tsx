@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-empty-function */
-'use client'
 
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
