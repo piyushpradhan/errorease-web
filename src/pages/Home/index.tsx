@@ -1,25 +1,11 @@
-import { useNavigate } from 'react-router-dom'
-import { useMutation } from '@tanstack/react-query'
-import { loginWithGithub } from 'src/api/user'
-import { Button } from 'src/components/ui/button'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
-  const navigate = useNavigate()
-  const loginMutation = useMutation({
-    mutationKey: ['login'],
-    mutationFn: loginWithGithub,
-    onSuccess: () => {
-      navigate('/dashboard')
-    },
-  })
-
-  const handleGithubLogin = () => {
-    loginMutation.mutate()
-  }
-
   return (
     <main>
-      <Button onClick={handleGithubLogin}>Sign in with GitHub</Button>
+      <Link to="http://localhost:3000/api/auth/github" title="Sign in with GitHub">
+        Sign in with GitHub
+      </Link>
     </main>
   )
 }
