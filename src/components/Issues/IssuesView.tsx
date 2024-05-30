@@ -13,7 +13,7 @@ export default function IssuesView() {
 
   // const { isLoading, isSuccess, data } = api.user.getCurrentUserData.useQuery()
 
-  const [issuesView, setIssuesView] = useState<{
+  const [issuesView] = useState<{
     openIssues: Issue[]
     closedIssues: Issue[]
   }>()
